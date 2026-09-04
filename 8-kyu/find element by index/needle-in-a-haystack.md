@@ -35,3 +35,5 @@
 <p>The function will return the string: &nbsp;<em><strong>'found the needle at position 3'</strong></em></p>
 
 </div>
+
+<p>Test text for fixing git configuration for file path</p>
