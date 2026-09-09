@@ -19,3 +19,13 @@ function countSheeps(sheep) {
   }
   return count;
 }
+
+//FIRST REFACTORED SOLUTION
+function countSheeps(sheep) {
+  return sheep.filter((element) => element === true).length;
+}
+
+//SECOND REFACTORED SOLUTION
+function countSheeps(sheep) {
+  return sheep.filter((element) => element).length;
+}
