@@ -10,3 +10,8 @@ function noSpace(x) {
 
   return string;
 }
+
+//REFACTORED SOLUTION CODE
+function countSheeps(sheep) {
+  return sheep.filter((element) => element === true).length;
+}
