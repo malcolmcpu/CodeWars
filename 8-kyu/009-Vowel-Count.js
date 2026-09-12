@@ -19,3 +19,17 @@ function getCount(str) {
   });
   return vowels;
 }
+
+//REFACTORED SOLUTION CODE
+
+function getCount(str) {
+  let vowels = 'aeiou';
+  let vowelCount = 0;
+
+  str.split('').forEach((element) => {
+    if (vowels.includes(element)) {
+      vowelCount++;
+    }
+  });
+  return vowelCount;
+}
