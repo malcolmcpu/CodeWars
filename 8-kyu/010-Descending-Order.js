@@ -12,3 +12,13 @@ function descendingOrder(n) {
       .join(''),
   );
 }
+
+//FIRST REFACTORED SOLUTION
+function descendingOrder(n) {
+  n = String(n)
+    .split('')
+    .sort((a, b) => b - a)
+    .join('');
+
+  return Number(n);
+}
