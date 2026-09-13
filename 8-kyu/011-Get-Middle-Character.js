@@ -3,6 +3,22 @@
 // If the string's length is odd, return the middle character.
 // If the string's length is even, return the middle 2 characters.
 
+if (s.length % 2 === 0) {
+  console.log(s.slice(s.length / 2 - 1, s.length / 2 + 1));
+
+  return s.slice(s.length / 2 - 1, s.length / 2 + 1);
+} else return s[Math.floor(s.length / 2)];
+
+//FIRST REFACTORED SOLUTION
+
+function getMiddle(s) {
+  return s.length % 2 === 0
+    ? s.slice(s.length / 2 - 1, s.length / 2 + 1)
+    : s[Math.floor(s.length / 2)];
+}
+
+//SECOND REFACTORED SOLUTION
+
 function getMiddle(s) {
   if (s.length % 2 === 0) {
     //console.log(s.slice((s.length/2) -1, (s.length/2) + 1))
