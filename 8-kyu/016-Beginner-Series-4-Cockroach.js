@@ -5,3 +5,12 @@ function cockroachSpeed(s) {
   let kps = s / 60 / 60;
   return Math.floor(kps * 100000);
 }
+
+//REFACTORED SOLUTION CODE
+
+function cockroachSpeed(s) {
+  let kps = s / 60 / 60;
+  let cps = kps * 100000;
+
+  return Math.floor(cps);
+}
