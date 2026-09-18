@@ -14,3 +14,8 @@ function cockroachSpeed(s) {
 
   return Math.floor(cps);
 }
+
+//SECOND REFACTORED SOLUTION CODE
+function cockroachSpeed(s) {
+  return Math.floor((s / 60 / 60) * 100000);
+}
