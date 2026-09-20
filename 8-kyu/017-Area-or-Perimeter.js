@@ -12,3 +12,8 @@ const areaOrPerimeter = function (l, w) {
     return l + l + w + w;
   }
 };
+
+//REFACTORD SOLUTION CODE
+const areaOrPerimeterTwo = function (l, w) {
+  return l === w ? l * w : l * 2 + w * 2;
+};
