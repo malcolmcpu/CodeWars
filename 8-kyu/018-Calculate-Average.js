@@ -19,3 +19,10 @@ function findAverage(array) {
 //REFACTORED SOLUTION CODE - from building out the brute force method with a for loop,
 // we can see that it's also possible to apply the reduce method to our input array and
 // then just divide by the input array's length to retrieve the same result
+
+function findAverage(array) {
+  // your code here
+  return array.length
+    ? array.reduce((acc, currentVal) => acc + currentVal, 0) / array.length
+    : 0;
+}
