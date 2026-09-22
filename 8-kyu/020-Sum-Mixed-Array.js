@@ -12,3 +12,6 @@ function sumMix(x) {
 
   return sum;
 }
+
+//REFACTORED SOLUTION - To replace the forEach method, we can employ map() to iterate thru and convert all
+// elements to numbers. We can then employ the reduce() method to gather the sum then return.
