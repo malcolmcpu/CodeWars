@@ -15,3 +15,9 @@ function sumMix(x) {
 
 //REFACTORED SOLUTION - To replace the forEach method, we can employ map() to iterate thru and convert all
 // elements to numbers. We can then employ the reduce() method to gather the sum then return.
+
+function sumMix(x) {
+  return x
+    .map((element) => Number(element))
+    .reduce((acc, currVal) => acc + currVal, 0);
+}
