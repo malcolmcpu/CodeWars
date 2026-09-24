@@ -9,3 +9,10 @@
 // and "G". Your function receives one side of the DNA (string, except for
 // Haskell); you need to return the other complementary side. DNA strand
 // is never empty or there is no DNA at all (again, except for Haskell).
+
+function dnaStrand(dna) {
+  dna = dna.split('');
+  let corresponding = { A: 'T', T: 'A', C: 'G', G: 'C' };
+
+  return dna.map((element) => corresponding[element]).join('');
+}
