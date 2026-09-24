@@ -16,3 +16,15 @@ function dnaStrand(dna) {
 
   return dna.map((element) => corresponding[element]).join('');
 }
+
+//REFACTORED SOLUTION - Rather than redefining dna and doing split
+// separately, we can append .split(), .map() and .join()
+
+function dnaStrand(dna) {
+  let corresponding = { A: 'T', T: 'A', C: 'G', G: 'C' };
+
+  return dna
+    .split('')
+    .map((element) => corresponding[element])
+    .join('');
+}
