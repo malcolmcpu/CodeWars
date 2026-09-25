@@ -5,3 +5,12 @@
 // Example #2: An input of 765 will/should return 493625 because 7^2 is 49, 6^2 is 36, and 5^2 is 25. (49-36-25)
 
 // Note: The function accepts a non-negative integer and returns an integer.
+
+function squareDigits(num) {
+  console.log(`num is: ${num}`);
+
+  num = String(num).split('');
+  let squaredArr = num.map((element) => Math.pow(Number(element), 2));
+
+  return Number(squaredArr.join(''));
+}
