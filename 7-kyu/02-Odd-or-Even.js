@@ -9,3 +9,12 @@ function oddOrEven(array) {
 
   return sum % 2 === 0 ? 'even' : 'odd';
 }
+
+//REFACTORED SOLUTION - Rather than placing the reduce in sum, to decrease space complexity,
+// we can just use the reduce in the ternary
+
+function oddOrEven(array) {
+  return array.reduce((acc, currentVal) => acc + currentVal, 0) % 2 === 0
+    ? 'even'
+    : 'odd';
+}
