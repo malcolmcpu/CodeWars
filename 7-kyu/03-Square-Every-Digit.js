@@ -14,3 +14,17 @@ function squareDigits(num) {
 
   return Number(squaredArr.join(''));
 }
+
+//REFACTORED SOLUTION - Rather than doing the string, and split separately, we can append
+// everything together for a one line. The greater concern would be how this may affect
+// the time complexity, that's something I would want to talk thru.
+
+function squareDigits(num) {
+  return Number(
+    num
+      .toString()
+      .split('')
+      .map((element) => Math.pow(Number(element), 2))
+      .join(''),
+  );
+}
