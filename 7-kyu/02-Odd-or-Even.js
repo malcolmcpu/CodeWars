@@ -10,11 +10,22 @@ function oddOrEven(array) {
   return sum % 2 === 0 ? 'even' : 'odd';
 }
 
-//REFACTORED SOLUTION - Rather than placing the reduce in sum, to decrease space complexity,
+// REFACTORED SOLUTION - Rather than placing the reduce in sum, to decrease space complexity,
 // we can just use the reduce in the ternary
 
 function oddOrEven(array) {
   return array.reduce((acc, currentVal) => acc + currentVal, 0) % 2 === 0
     ? 'even'
     : 'odd';
+}
+
+// SECOND SOLUTION REFACTOR - From the first refactor, we don't even actually have
+// to use an equals comparison, we automatically know that if the ternary condition
+// returns a number, the reduce result is odd. So we'll then put 'odd' as the first
+// return and 'even' as the second.
+
+function oddOrEven(array) {
+  return array.reduce((acc, currentVal) => acc + currentVal, 0) % 2
+    ? 'odd'
+    : 'even';
 }
