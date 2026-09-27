@@ -22,3 +22,10 @@ function twoOldestAges(ages) {
 
   return [ages[ages.length - 2], ages[ages.length - 1]];
 }
+
+//SECOND REFACTORED SOLUTION - We can actually initialize an empty array to hold our two
+// oldest age elements. After sorting the input array, we then pop and push that element
+// to the empty array. Next we push in the next element at the end of the original sorted
+// array because the first one was already popped off. With the second oldest age being
+// the first element in the new initialized array, and the prompt asking for the oldest
+// first, we can perform .reverse() method to satisfy the required return format.
