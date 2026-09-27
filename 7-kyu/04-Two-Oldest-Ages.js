@@ -29,3 +29,12 @@ function twoOldestAges(ages) {
 // array because the first one was already popped off. With the second oldest age being
 // the first element in the new initialized array, and the prompt asking for the oldest
 // first, we can perform .reverse() method to satisfy the required return format.
+
+function twoOldestAges(ages) {
+  let oldest = [];
+
+  oldest.push(ages.sort((a, b) => a - b).pop());
+  oldest.push(ages.pop());
+
+  return oldest.reverse();
+}
