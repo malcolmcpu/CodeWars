@@ -17,3 +17,14 @@ function toAcronym(inp) {
 
   return acronyms;
 }
+
+//REFACTORED SOLUTION CODE - Other than the for loop, we can transform the
+// string to an array then map thru the element, then perform the same
+// action with adding first letters to the acronym empty string.
+
+function toAcronym(inp) {
+  let acronyms = '';
+  inp.split(' ').map((element) => (acronyms += element[0].toUpperCase()));
+
+  return acronyms;
+}
