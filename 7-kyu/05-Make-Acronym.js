@@ -28,3 +28,15 @@ function toAcronym(inp) {
 
   return acronyms;
 }
+
+//SECOND REFACTORED SOLUTION CODE - Because .map() automatically creates a new array,
+// we don't have to add the first characters to an empty string. They will be
+// held in the new array created by map, thus allowing us to put the first
+// letter elements back together using the .join() method.
+
+function toAcronym(inp) {
+  return inp
+    .split(' ')
+    .map((element) => element[0].toUpperCase())
+    .join('');
+}
