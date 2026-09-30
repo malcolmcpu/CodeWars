@@ -11,3 +11,10 @@ function sum(numbers) {
 
   return total;
 }
+
+//SOLUTION REFACTOR - To move around creating a total variable, we
+// can apply the reduce method and move thru the numbers array.
+
+function sum(numbers) {
+  return numbers.reduce((acc, currentValue) => acc + currentValue, 0);
+}
