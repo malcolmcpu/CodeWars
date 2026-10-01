@@ -9,3 +9,13 @@ function sumDigits(number) {
 
   return numArr.reduce((accum, currentVal) => accum + currentVal, 0);
 }
+
+//REFACTORED SOLUTION => We can also actually append turn the number into
+// a string and then append the reduce method to the end of our array methods
+// turning it into a one liner.
+
+function sumDigits(number) {
+  return String(Math.abs(number))
+    .split('')
+    .reduce((acc, currentVal) => acc + Number(currentVal), 0);
+}
