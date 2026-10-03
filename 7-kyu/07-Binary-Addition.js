@@ -3,3 +3,8 @@
 // before, or after the addition.
 
 // The binary number returned should be a string.
+function addBinary(a, b) {
+  let sum = a + b;
+
+  return sum.toString(2);
+}
