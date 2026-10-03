@@ -8,3 +8,11 @@ function addBinary(a, b) {
 
   return sum.toString(2);
 }
+
+// REFACTOR SOLUTION - Rather than storing sum in a variable, we can
+// simple add the function inputs in parentheses and append for a
+// simple one liner.
+
+function addBinary(a, b) {
+  return (a + b).toString(2);
+}
