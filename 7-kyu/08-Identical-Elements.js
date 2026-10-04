@@ -17,3 +17,19 @@ function duplicateElements(m, n) {
   }
   return false;
 }
+
+//REFACTORED SOLUTION - Let's replace the use of the regular for-loop with a
+// for-of loop, then employ the includes() conditional
+
+function duplicateElements(m, n) {
+  if (m == [] || n == []) {
+    return false;
+  }
+
+  for (const element of m) {
+    if (n.includes(element)) {
+      return true;
+    }
+  }
+  return false;
+}
