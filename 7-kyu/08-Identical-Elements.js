@@ -33,3 +33,22 @@ function duplicateElements(m, n) {
   }
   return false;
 }
+
+//SECOND REFACTORED SOLUTION - Worked with House Gardner to generate solution logic. Idea is to declare a trueCount variable to hold a number. We'll move thru the entire array for any time the array match is true, add to the trueCount. After iterating thru array, if at any time the trueCount is more than zero, we can return true.
+
+function duplicateElements(m, n) {
+  if (m.length === 0 || n.length === 0) {
+    return false;
+  }
+
+  let trueCount = 0;
+  m.forEach((element) => {
+    console.log(n.indexOf(element));
+
+    if (n.indexOf(element) > -1) {
+      trueCount += 1;
+    }
+  });
+
+  return trueCount > 0 ? true : false;
+}
