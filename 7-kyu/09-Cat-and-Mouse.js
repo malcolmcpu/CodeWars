@@ -22,3 +22,13 @@ function catMouse(x) {
     return 'Caught!';
   } else return 'Escaped!';
 }
+
+// REFACTORED SOLUTION - Instead of for looping, we can separate the characters,
+// filter out for the periods and then check for just length. Using that value,
+// we can set up the return strings within a ternary.
+
+function catMouse(x) {
+  return x.split('').filter((element) => element === '.').length <= 3
+    ? 'Caught!'
+    : 'Escaped!';
+}
