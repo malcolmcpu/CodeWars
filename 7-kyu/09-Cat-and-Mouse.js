@@ -32,3 +32,9 @@ function catMouse(x) {
     ? 'Caught!'
     : 'Escaped!';
 }
+
+//SECOND REFACTOR SOLUTION - After idea from Chanely and Eric, realized we can just check for the original input string's length and than subtract by 2 to account for "C" and "M" then apply the same ternary logic.
+
+function catMouse(x) {
+  return x.length - 2 <= 3 ? 'Caught!' : 'Escaped!';
+}
