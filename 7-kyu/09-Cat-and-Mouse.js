@@ -8,3 +8,17 @@
 
 // "C...m" returns "Caught!" <-- as there are three characters between the two,
 // the cat can jump.
+
+function catMouse(x) {
+  let count = 0;
+
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === '.') {
+      count++;
+    }
+  }
+
+  if (count <= 3) {
+    return 'Caught!';
+  } else return 'Escaped!';
+}
