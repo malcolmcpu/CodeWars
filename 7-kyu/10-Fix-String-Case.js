@@ -16,3 +16,19 @@ function solve(s) {
 
   return lowerCaseCount >= upperCaseCount ? s.toLowerCase() : s.toUpperCase();
 }
+
+//REFACTORED SOLUTION CODE - As an alternative to running the for-loop, we can split input, then filter by casing logic and still store amounts for both in lowerCaseCount and upperCaseCount.
+
+function solve(s) {
+  console.log(s);
+  let lowerCaseCount = s
+    .split('')
+    .filter((element) => element == element.toLowerCase()).length;
+  let upperCaseCount = s
+    .split('')
+    .filter((element) => element == element.toUpperCase()).length;
+
+  if (lowerCaseCount >= upperCaseCount) {
+    return s.toLowerCase();
+  } else return s.toUpperCase();
+}
