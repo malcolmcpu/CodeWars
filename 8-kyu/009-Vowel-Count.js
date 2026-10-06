@@ -33,3 +33,7 @@ function getCount(str) {
   });
   return vowelCount;
 }
+
+//SECOND REFACTORED SOLUTION - We'll make use of regex in this instance and check
+// for what vowel array returns. If no vowels are in the match array, we return
+// "null." If vowels are the array, we'll return the length.
