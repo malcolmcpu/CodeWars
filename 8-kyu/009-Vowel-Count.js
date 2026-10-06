@@ -37,3 +37,8 @@ function getCount(str) {
 //SECOND REFACTORED SOLUTION - We'll make use of regex in this instance and check
 // for what vowel array returns. If no vowels are in the match array, we return
 // "null." If vowels are the array, we'll return the length.
+
+function getCount(str) {
+  let regexTest = /[aeiou]/g;
+  return str.match(regexTest) ? str.match(regexTest).length : 0;
+}
