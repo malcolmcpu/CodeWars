@@ -6,3 +6,11 @@
 // the output should be 7.
 
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+function sumTwoSmallestNumbers(numbers) {
+  numbers = numbers
+    .filter((element) => Math.sign(element) === 1)
+    .sort((a, b) => a - b);
+
+  return numbers[0] + numbers[1];
+}
