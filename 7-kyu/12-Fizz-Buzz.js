@@ -7,3 +7,19 @@
 // If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead
 
 // N will never be less than 1.
+
+function fizzbuzz(n) {
+  let arr = [];
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push('FizzBuzz');
+    } else if (i % 3 === 0) {
+      arr.push('Fizz');
+    } else if (i % 5 === 0) {
+      arr.push('Buzz');
+    } else arr.push(i);
+  }
+
+  return arr;
+}
