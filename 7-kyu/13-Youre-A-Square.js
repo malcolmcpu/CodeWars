@@ -20,7 +20,8 @@ var isSquare = function (n) {
   }
 };
 
-//REFACTORED SOLUTION CODE - We can cut the else-if and if down some, let's leave the if and inside of else, we can place a ternary.
+//REFACTORED SOLUTION CODE - We can cut the else-if and if down some, let's
+// leave the if and inside of else, we can place a ternary.
 
 var isSquare = function (n) {
   if (n < 0) {
@@ -28,4 +29,12 @@ var isSquare = function (n) {
   } else {
     return n === 0 ? true : Number.isInteger(Math.sqrt(n));
   }
+};
+
+//SECOND REFACTOR - We can make the first refactor even shorter by starting with
+// one ternary checking the logic inside of the if conditional. The second expression
+// then leads into another conditional to check with two remaining expressions.
+
+var isSquare = function (n) {
+  return n < 0 ? false : n === 0 ? true : Number.isInteger(Math.sqrt(n));
 };
