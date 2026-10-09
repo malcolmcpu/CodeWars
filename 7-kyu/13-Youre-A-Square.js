@@ -19,3 +19,13 @@ var isSquare = function (n) {
     return Number.isInteger(Math.sqrt(n));
   }
 };
+
+//REFACTORED SOLUTION CODE - We can cut the else-if and if down some, let's leave the if and inside of else, we can place a ternary.
+
+var isSquare = function (n) {
+  if (n < 0) {
+    return false;
+  } else {
+    return n === 0 ? true : Number.isInteger(Math.sqrt(n));
+  }
+};
