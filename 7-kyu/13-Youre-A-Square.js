@@ -38,3 +38,16 @@ var isSquare = function (n) {
 var isSquare = function (n) {
   return n < 0 ? false : n === 0 ? true : Number.isInteger(Math.sqrt(n));
 };
+
+//SECOND REFACTOR - We can split up the two ternaries in another way to make the
+// final return a little shorter. The second one gets placed into a helper function.
+// This allows to only need to show one ternary on the final line, where the second
+// conditional check only gets called on if the input passed is greater than 0.
+
+var isSquare = function (n) {
+  function hasQuotient(num) {
+    return num === 0 ? true : Number.isInteger(Math.sqrt(num));
+  }
+
+  return n < 0 ? false : hasQuotient(n);
+};
