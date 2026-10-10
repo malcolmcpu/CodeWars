@@ -24,3 +24,24 @@
 // number([[10,0],[3,5],[5,8]]) will yield a result of 5
 
 // number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]) will yield a result of 17
+
+var number = function (busStops) {
+  // P - input will be an array, with each element being a two element array itself
+  // R - output will be a single integer that represents the amount of left on the bus
+  // E - number([[6,0], [8,4], [9,3], [7,4], [2,7]] => should return 14)
+  //   P - 1. declare busOn and busOff variables defined at 0
+  //       2. forEach thru input
+  //       3. on each element place the first element into busOn and second into busOff
+  //       4. return the busOn - busOff
+
+  let busOn = 0;
+  let busOff = 0;
+
+  busStops.forEach((element) => {
+    busOn += element[0];
+    busOff += element[1];
+  });
+
+  console.log(busOn, busOff);
+  return busOn - busOff;
+};
