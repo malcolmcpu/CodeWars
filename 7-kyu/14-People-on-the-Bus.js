@@ -45,3 +45,10 @@ var number = function (busStops) {
   console.log(busOn, busOff);
   return busOn - busOff;
 };
+
+//REFACTORED SOLUTION - We'll replace using busOn and busOff variables, we can
+// still use .forEach() though. We'll employ a global variable of 'passengers'
+// instead. In the logic of .forEach(), we'll calculate the difference using
+// each subarrays first and second element. That difference will then be stored
+// in the global passengers variable each iteration. Then we'll simply return
+// 'passengers' at the end.
