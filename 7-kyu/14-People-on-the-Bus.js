@@ -52,3 +52,11 @@ var number = function (busStops) {
 // each subarrays first and second element. That difference will then be stored
 // in the global passengers variable each iteration. Then we'll simply return
 // 'passengers' at the end.
+
+var number = function (busStops) {
+  let passengers = 0;
+
+  busStops.forEach((element) => (passengers += element[0] - element[1]));
+
+  return passengers;
+};
