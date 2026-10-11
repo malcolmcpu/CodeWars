@@ -14,3 +14,8 @@ function positiveSum(arr) {
   }
   return sum;
 }
+
+//REFACTORED SOLUTION - In place of doing for-of loop where we apply conditional,
+// we can run the .filter() method to weed out our positive numbers with the same
+// condition from our previous if. Afterward we can apply .reduce() method to replace
+// the adding of elements to a sum variable.
