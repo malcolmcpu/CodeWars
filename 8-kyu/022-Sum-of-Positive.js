@@ -19,3 +19,9 @@ function positiveSum(arr) {
 // we can run the .filter() method to weed out our positive numbers with the same
 // condition from our previous if. Afterward we can apply .reduce() method to replace
 // the adding of elements to a sum variable.
+
+function positiveSum(arr) {
+  return arr
+    .filter((element) => Math.sign(element) === 1)
+    .reduce((acc, cumVal) => acc + cumVal, 0);
+}
