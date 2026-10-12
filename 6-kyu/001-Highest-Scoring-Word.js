@@ -11,3 +11,18 @@
 // in the original string.
 
 // All letters will be lowercase and all inputs will be valid.
+
+function high(x) {
+  let alphabet = ' abcdefghijklmnopqrstuvwxyz';
+  let scoreList = [];
+
+  x = x.split(' ');
+  for (const element of x) {
+    let score = 0;
+    for (let i = 0; i < element.length; i++) {
+      score += alphabet.indexOf(element[i]);
+    }
+    scoreList.push(score);
+  }
+  return x[scoreList.indexOf(Math.max(...scoreList))];
+}
