@@ -17,3 +17,6 @@ function arithmetic(a, b, operator) {
     return a / b;
   }
 }
+
+//REFACTORED SOLUTION CODE - In place of the else-ifs, we can employ switch syntax. For the
+// switch condition, we'll check the value of the "operator" parameter
