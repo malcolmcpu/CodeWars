@@ -20,3 +20,16 @@ function arithmetic(a, b, operator) {
 
 //REFACTORED SOLUTION CODE - In place of the else-ifs, we can employ switch syntax. For the
 // switch condition, we'll check the value of the "operator" parameter
+
+function arithmetic(a, b, operator) {
+  switch (operator) {
+    case 'add':
+      return a + b;
+    case 'subtract':
+      return a - b;
+    case 'multiply':
+      return a * b;
+    case 'divide':
+      return a / b;
+  }
+}
