@@ -33,3 +33,10 @@ function minMax(arr) {
   }
   return [extremes.min, extremes.max];
 }
+
+//REFACTORED SOLUTION - Rather than doing two loops thru the same array, we can run
+// Math.min and Math.max methods on shallow copies of the input array.
+
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
+}
