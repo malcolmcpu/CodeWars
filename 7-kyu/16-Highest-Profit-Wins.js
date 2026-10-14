@@ -9,3 +9,27 @@
 //REMARKS - All arrays or lists will always have at least one element, so
 // you don't need to check the length. Also, your function will always get
 // an array or a list, you don't have to check for null, undefined or similar.
+
+function minMax(arr) {
+  let extremes = {
+    min: null,
+    max: null,
+  };
+
+  for (const element of arr) {
+    if (extremes.min === null) {
+      extremes.min = element;
+    } else if (element < extremes.min) {
+      extremes.min = element;
+    }
+  }
+
+  for (const element of arr) {
+    if (extremes.max === null) {
+      extremes.max = element;
+    } else if (element > extremes.max) {
+      extremes.max = element;
+    }
+  }
+  return [extremes.min, extremes.max];
+}
