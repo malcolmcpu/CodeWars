@@ -12,3 +12,11 @@ function arrayDiff(a, b) {
   }
   return unique;
 }
+
+//REFACTOR - Alternative to for-loop, we can use filter to iterate through
+// the "a" array and still apply the b.includes logic. We'll be set up to
+// still only return the a elements that aren't inlcuded in "b"
+
+function arrayDiff(a, b) {
+  return a.filter((element) => !b.includes(element));
+}
