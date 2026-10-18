@@ -3,3 +3,12 @@
 
 // As the input may have trailing spaces, you will also need to ignore
 // unneccesary whitespace.
+
+function reverse(string) {
+  let revStr = [];
+
+  for (const element of string.split(' ').reverse()) {
+    revStr.push(element);
+  }
+  return revStr.join(' ');
+}
