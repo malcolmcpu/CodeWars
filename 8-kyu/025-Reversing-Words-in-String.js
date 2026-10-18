@@ -12,3 +12,11 @@ function reverse(string) {
   }
   return revStr.join(' ');
 }
+
+//REFACTORED SOLUTION - Because we're only reversing the position of the words
+// and NOT the letters in each word, we can just break up the letters by space
+// and then append .reverse() and .join()
+
+function reverse(string) {
+  return string.split(' ').reverse().join(' ');
+}
