@@ -15,3 +15,14 @@ function smallEnough(a, limit) {
     return true;
   } else return false;
 }
+
+//REFACTORED SOLUTION - Alternative to doing the for-of loop and pushing into
+// empty array, we can deploy .filter() method and check for the same condition,
+// creating an array anyway. With that created array, we can compare the length
+// of that array with the length of the original input array.
+
+function smallEnough(a, limit) {
+  let limitCheck = a.filter((element) => element <= limit);
+
+  return limitCheck.length === a.length;
+}
