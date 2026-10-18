@@ -33,3 +33,12 @@ function smallEnough(a, limit) {
 function smallEnough(a, limit) {
   return a.length === a.filter((element) => element <= limit).length;
 }
+
+//THIRD REFACTORED SOLUTION - With the condition used on our filter, we can use that
+// logic inside of running an .every() check on the original input array
+
+function smallEnough(a, limit) {
+  const limitCheck = (element) => element <= limit;
+
+  return a.every(limitCheck);
+}
