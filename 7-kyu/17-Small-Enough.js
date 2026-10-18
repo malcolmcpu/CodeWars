@@ -26,3 +26,10 @@ function smallEnough(a, limit) {
 
   return limitCheck.length === a.length;
 }
+
+//SECOND REFACTORED SOLUTION - We can do a comparison check on one line with the
+// filtered array w/o setting to a variable.
+
+function smallEnough(a, limit) {
+  return a.length === a.filter((element) => element <= limit).length;
+}
