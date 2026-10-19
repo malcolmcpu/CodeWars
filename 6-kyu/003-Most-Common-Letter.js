@@ -13,4 +13,20 @@ function replaceCommon(string, letter) {
   //      2. iterate thru the string and keep a count of all of the letter instances
   //      3. check for the key with the greatest value
   //      4. whichever letter, we will replace that letter with the "letter" parameter
+
+  let letterCount = {};
+  let spacesRemoved = string.replaceAll(' ', '');
+
+  for (const element of spacesRemoved) {
+    if (!letterCount[element]) {
+      letterCount[element] = 1;
+    } else letterCount[element]++;
+  }
+
+  let characterOrder = Object.keys(letterCount);
+  let firstMax = Object.values(letterCount).indexOf(
+    Math.max(...Object.values(letterCount)),
+  );
+
+  return string.replaceAll(characterOrder[firstMax], letter);
 }
