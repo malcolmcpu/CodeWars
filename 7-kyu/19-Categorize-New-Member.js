@@ -41,3 +41,11 @@ function openOrSenior(data) {
   }
   return categories;
 }
+
+//SECOND REFACTORED SOLUTION - As our return is a new array, we can employ map to iterate through and then employ our ternary logic to decide which outputs are the array elements.
+
+function openOrSenior(data) {
+  return data.map((element) =>
+    element[0] >= 55 && element[1] > 7 ? 'Senior' : 'Open',
+  );
+}
