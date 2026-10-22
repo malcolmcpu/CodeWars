@@ -17,3 +17,14 @@
 // Output will consist of a list of string values (in Haskell and C: Open or
 // Senior) stating whether the respective member is to be placed in the senior
 // or open category.
+
+function openOrSenior(data) {
+  let categories = [];
+
+  for (const element of data) {
+    if (element[0] >= 55 && element[1] > 7) {
+      categories.push('Senior');
+    } else categories.push('Open');
+  }
+  return categories;
+}
