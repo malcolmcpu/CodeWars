@@ -28,3 +28,16 @@ function openOrSenior(data) {
   }
   return categories;
 }
+
+//REFACTORED SOLUTION - Within the conditional, we can employ a ternary operator for better readability.
+
+function openOrSenior(data) {
+  let categories = [];
+
+  for (const element of data) {
+    element[0] >= 55 && element[1] > 7
+      ? categories.push('Senior')
+      : categories.push('Open');
+  }
+  return categories;
+}
