@@ -17,3 +17,7 @@ function findNextSquare(sq) {
 }
 
 //REFACTORED SOLUTION CODE - We can simply set up the the if and else as a simple one line ternary.
+
+function findNextSquare(sq) {
+  return Number.isInteger(Math.sqrt(sq)) ? Math.pow(Math.sqrt(sq) + 1, 2) : -1;
+}
