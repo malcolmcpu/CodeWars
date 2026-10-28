@@ -15,3 +15,5 @@ function findNextSquare(sq) {
     return -1;
   } else return Math.pow(Math.sqrt(sq) + 1, 2);
 }
+
+//REFACTORED SOLUTION CODE - We can simply set up the the if and else as a simple one line ternary.
