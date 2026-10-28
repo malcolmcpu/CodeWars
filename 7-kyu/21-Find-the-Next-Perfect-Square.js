@@ -9,3 +9,9 @@
 // If the argument is itself not a perfect square then return either
 // -1 or an empty value like None or null, depending on your language.
 // You may assume the argument is non-negative.
+
+function findNextSquare(sq) {
+  if (!Number.isInteger(Math.sqrt(sq))) {
+    return -1;
+  } else return Math.pow(Math.sqrt(sq) + 1, 2);
+}
