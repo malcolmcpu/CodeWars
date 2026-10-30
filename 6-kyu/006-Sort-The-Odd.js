@@ -20,3 +20,9 @@ function sortArray(array) {
 // pull the odd number in correct order; because this will also remove that same
 // number from oddNums array afterward. The shift method will also keep us from
 // repeating any already added numbers for the oddNums order.
+
+function sortArray(array) {
+  let oddNums = array.filter((element) => element % 2).sort((a, b) => a - b);
+
+  return array.map((element) => (element % 2 ? oddNums.shift() : element));
+}
