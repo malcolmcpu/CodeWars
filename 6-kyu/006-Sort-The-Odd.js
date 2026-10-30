@@ -13,3 +13,10 @@ function sortArray(array) {
   }
   return array;
 }
+
+//REFACTORED SOLUTION - After initializing our array of sorted odd integer elements.
+// We can map thru our original array and use a ternary as the callback function.
+// Whenever we encounter an number during map, we can call on the .shift() method to
+// pull the odd number in correct order; because this will also remove that same
+// number from oddNums array afterward. The shift method will also keep us from
+// repeating any already added numbers for the oddNums order.
