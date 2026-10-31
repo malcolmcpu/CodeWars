@@ -10,3 +10,16 @@
 // "recede"   =>  "()()()"
 // "Success"  =>  ")())())"
 // "(( @"     =>  "))(("
+
+function duplicateEncode(word) {
+  let newStr = '';
+  word = word.toLowerCase();
+
+  for (let i = 0; i < word.length; i++) {
+    if (word.indexOf(word[i]) === word.lastIndexOf(word[i])) {
+      newStr += '(';
+    } else newStr += ')';
+  }
+
+  return newStr;
+}
