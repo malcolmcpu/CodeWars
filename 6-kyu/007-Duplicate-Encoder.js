@@ -24,4 +24,20 @@ function duplicateEncode(word) {
   return newStr;
 }
 
-//REFACTORED SOLUTION - Instead of the full for-loop, we can split up the input string and run map method. Within the map, we can shorten the if-conditional with a one line ternary. In the ternary, we then add the parentheses to the newStr variable.
+//REFACTORED SOLUTION - Instead of the full for-loop, we can split up
+// the input string and run map method. Within the map, we can shorten
+// the if-conditional with a one line ternary. In the ternary, we then
+// add the parentheses to the newStr variable.
+
+function duplicateEncode(word) {
+  let newStr = '';
+  word = word.toLowerCase();
+  word
+    .split('')
+    .map((element) =>
+      word.indexOf(element) === word.lastIndexOf(element)
+        ? (newStr += '(')
+        : (newStr += ')'),
+    );
+  return newStr;
+}
