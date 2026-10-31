@@ -41,3 +41,17 @@ function duplicateEncode(word) {
     );
   return newStr;
 }
+
+//SECOND REFACTORED SOLUTION - We can reduce even more syntax by removing
+// the newStr variable. Because .map() inherently returns an array, we can
+// place the ternary within and employ the .join() method at the very end.
+
+function duplicateEncode(word) {
+  word = word.toLowerCase();
+  return word
+    .split('')
+    .map((element) =>
+      word.indexOf(element) == word.lastIndexOf(element) ? '(' : ')',
+    )
+    .join('');
+}
