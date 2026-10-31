@@ -24,6 +24,4 @@ function duplicateEncode(word) {
   return newStr;
 }
 
-//REFACTORED SOLUTION - Instead of the full for-loop, we can split
-// up the input string and run map method. Within the map, we can
-// shorten the if-conditional with a one line ternary.
+//REFACTORED SOLUTION - Instead of the full for-loop, we can split up the input string and run map method. Within the map, we can shorten the if-conditional with a one line ternary. In the ternary, we then add the parentheses to the newStr variable.
