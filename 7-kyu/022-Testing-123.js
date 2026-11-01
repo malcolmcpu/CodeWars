@@ -8,3 +8,13 @@
 // olon and space in between.
 
 // Examples: ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+var number = function (array) {
+  let newArr = [];
+
+  array.forEach((element, index) => {
+    newArr.push(`${index + 1}: ${element}`);
+  });
+
+  return newArr;
+};
