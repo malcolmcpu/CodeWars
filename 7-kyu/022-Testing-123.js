@@ -23,3 +23,7 @@ var number = function (array) {
 // creates a new array, removing the need for an empty array/any push method line.
 // While also being able to access the indeces, we can use the same template
 // literal logic.
+
+var number = function (array) {
+  return array.map((element, index) => `${index + 1}: ${element}`);
+};
