@@ -14,3 +14,26 @@
 //      5. reverse order of vowels in your array
 //      6. loop through the input string again and now replace placeholder characters with elements from array, then remove that char from the array
 //      7. return the edited version of the string
+
+var reverseVowels = function (s) {
+  const allVowels = 'aeiouAEIOU';
+  let vowelTrack = [];
+  s = s.split('');
+
+  for (let i = 0; i < s.length; i++) {
+    if (allVowels.includes(s[i])) {
+      vowelTrack.push(s[i]);
+      s[i] = '~';
+    }
+  }
+
+  vowelTrack = vowelTrack.reverse();
+  console.log('this is vowel track: ', vowelTrack);
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '~') {
+      console.log(vowelTrack);
+      s[i] = vowelTrack.shift();
+    }
+  }
+  return s.join('');
+};
