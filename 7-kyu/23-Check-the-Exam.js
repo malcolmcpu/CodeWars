@@ -8,3 +8,19 @@
 // represented as an empty string (in C the space character is used).
 
 // If the score < 0, return 0.
+
+function checkExam(array1, array2) {
+  let score = 0;
+
+  for (const [index, element] of array2.entries()) {
+    if (element === '') {
+      score += 0;
+    } else if (element === array1[index]) {
+      score += 4;
+    } else if (element !== array1[index]) {
+      score -= 1;
+    }
+  }
+
+  return score > 0 ? score : 0;
+}
