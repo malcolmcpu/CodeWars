@@ -20,3 +20,15 @@
 //     4. with that array, remove any elements that are just spaces or iterate and only push non space elements
 //     5. push non space elements to the empty array
 //     6. put array together with space as a parameter
+
+var reverseWords = function (s) {
+  s = s.trim().split(' ');
+  let reverse = [];
+
+  for (let i = s.length - 1; i >= 0; i--) {
+    if (s[i] !== '') {
+      reverse.push(s[i]);
+    }
+  }
+  return reverse.join(' ');
+};
