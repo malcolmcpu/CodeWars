@@ -16,3 +16,9 @@
 // P - 1. split up the input string by each word
 //     2. reach in for the last word
 //     3. evaluate the last word's length
+
+var lengthOfLastWord = function (s) {
+  s = s.trim().split(' ');
+
+  return s[s.length - 1].length;
+};
